@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "rbaritone_lite",
+  "version": "${version}",
+  "name": "RBaritone Lite",
+  "description": "Client-side Baritone-like autopilot for Minecraft 1.21.11 Fabric: goto, follow, stop.",
+  "authors": ["RaidMine"],
+  "contact": {},
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "ru.raidmine.rbaritone.client.RBaritoneClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "minecraft": "1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
