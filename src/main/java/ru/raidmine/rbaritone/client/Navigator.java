@@ -85,7 +85,7 @@ public final class Navigator {
             for (AbstractClientPlayerEntity player : client.world.getPlayers()) {
                 String name = player.getName().getString();
                 if (player != client.player && name.equalsIgnoreCase(followNick)) {
-                    return player.getPos();
+                    return new Vec3d(player.getX(), player.getY(), player.getZ());
                 }
             }
         }
@@ -94,7 +94,7 @@ public final class Navigator {
     }
 
     private static void moveTo(MinecraftClient client, ClientPlayerEntity player, Vec3d targetPos, double stopDistance) {
-        Vec3d pos = player.getPos();
+        Vec3d pos = new Vec3d(player.getX(), player.getY(), player.getZ());
         double dx = targetPos.x - pos.x;
         double dy = targetPos.y - pos.y;
         double dz = targetPos.z - pos.z;
